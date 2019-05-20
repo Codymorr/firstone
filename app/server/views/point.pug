@@ -1,0 +1,31 @@
+
+// preset form values if we receive a userdata object //
+- user = typeof(udata) != 'undefined' ? udata : { }
+.col-md-4
+    form.card.card-body.bg-light(method='post', action='/send')#point-form
+        h2 Send Money!
+        //- h6 Please Login To Your Account
+        .form-group
+            label Email
+            input.form-control(type='text', id='email', placeholder ='eg- axmed@gmail.com', name='email', value = recieverEmail )
+        .form-group
+            label Amount
+            input.form-control(type='text', id='amount', placeholder = 'eg- 5', name='amount', value = amount)
+        #row1
+            button(type='submit')#btn_send_point.btn.btn-primary
+                span.fa.fa-lock
+                | Send
+    form.card.card-body.bg-light(method='post', action='')#point-form.cash
+        h3 Cash-in!
+        //- h6 Please Login To Your Account
+        .form-group
+            //-input.form-control(type='text', id='email', name='email', value = recieverEmail )
+            p To cash-in send the amount you want to cashin to #[span.cashout 0907384399] via EVC, Sahal or Zaad.
+    form.card.card-body.bg-light(method='post', action='')#point-form.cash
+        h3 Cash-out!
+        .form-group
+            p To cash-out send the amount you want to cash-out to #[span.cashout#cashout cashout@taano.co] via taano.
+            p You will recieve your payment within 12 hours.
+
+
+include modals/form-errors

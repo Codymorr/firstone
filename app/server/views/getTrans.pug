@@ -1,0 +1,27 @@
+
+extends layout
+
+block content
+	#login.center-vertical
+		form.card.card-body.bg-light(method='post', action='/getTransData').formWidth
+			h2 Add The Transaction Data
+			- purchasek = '100 Pj'
+			h6 Add your Store Email and the ip address of your website
+			.form-group
+				label Store Email
+				input.form-control(type='data', id='recieverEmail', name='recieverEmail', value = recieverEmail)
+				label Sender Email
+				input.form-control(type='data', id='senderEmail', name='senderEmail', value = senderEmail)
+				label Order ID
+				input.form-control(type='data', id='orderId', name='orderId', value= orderId)
+				label Amount
+				input.form-control(type='data', id='amount', name='amount', value = amount)
+				label shipping info 
+				div !{purchase}
+				input.form-control(type='data', id='shippingInfo', name='shippingInfo', value = shippingInfo)
+			#row1
+				button(type='submit')#btn_sign_in.btn.btn-primary
+					span.fa.fa-lock
+					| submit
+		
+block scripts

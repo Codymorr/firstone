@@ -1,0 +1,19 @@
+
+extends layout
+
+block content
+	#login.center-vertical
+		form.card.card-body.bg-light(method='post', action='/getNewApi')
+			h2 Add Your New Ip Address
+			h6 Add your Store Email and the ip address of your website
+			.form-group
+				label Ip address 
+				input.form-control(type='data', id='newApi', name='newApi')
+				label Store Email
+				input.form-control(type='data', id='newApiEmail', name='newApiEmail')
+			#row1
+				button(type='submit')#btn_sign_in.btn.btn-primary
+					span.fa.fa-lock
+					| submit
+		
+block scripts
