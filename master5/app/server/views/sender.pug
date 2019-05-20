@@ -1,0 +1,17 @@
+
+extends layout
+
+block content
+	#login.center-vertical
+		form.card.card-body.bg-light(method='post', action='/getIt')
+			h2 send points
+			h6 Unfiltered data here
+			.form-group
+				label Paste your chaotic data here
+				textarea.form-control(type='data', id='data2', name='data')
+			#row1
+				button(type='submit')#btn_sign_in.btn.btn-primary
+					span.fa.fa-lock
+					| submit
+		
+block scripts

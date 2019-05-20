@@ -1,0 +1,12 @@
+.col-md-4
+    form.card.card-body.bg-light(method='post')
+        h2 Transaction!
+        ul.list-group.list-group-flush#myList
+            each val in transactions
+                if(udata._id == val.sendTo[0]._id)
+                    li.list-group-item(style='background:#e3eaef') Got from !{val.gotFrom[0].name} | !{val.gotFrom[0].number} | Amount $!{val.amount} | Time: !{val.date}
+                else
+                    li.list-group-item Sent to !{val.sendTo[0].name} | Tel: !{val.sendTo[0].number} | Amount $!{val.amount} | Time: !{val.date}
+        button#loadMore(type="button") Show more
+        br
+        button#showLess(type="button") Show less

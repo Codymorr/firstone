@@ -1,0 +1,18 @@
+
+extends layout
+
+block content
+    nav.navbar.navbar-expand.navbar-light.bg-light
+        .nav-item
+            .navbar-brand Taano.co | 
+        .navbar-nav.ml-auto
+            .nav-item
+                button.btn.navbar-btn.btn-outline-dark Contact Us
+                
+    include account
+    include modals/alert
+
+block scripts
+    script(src='/js/views/signup.js')
+    script(src='/js/controllers/signupController.js')
+    script(src='/js/form-validators/accountValidator.js')
