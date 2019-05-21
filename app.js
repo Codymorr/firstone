@@ -31,10 +31,10 @@ process.env.DB_PORT = process.env.DB_PORT || 27017;
 process.env.DB_NAME = process.env.DB_NAME || 'node-login';
 
 if (app.get('env') != 'live'){
-	process.env.DB_URL = 'mongodb://'+process.env.DB_HOST+':'+process.env.DB_PORT;
+	process.env.DB_URL = 'mongodb://mongo:4M3Gr_FGyfjks!v@ds259586.mlab.com:59586/heroku_t8xqw6t1';
 }	else {
 // prepend url with authentication credentials // 
-	process.env.DB_URL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+process.env.DB_HOST+':'+process.env.DB_PORT;
+	process.env.DB_URL = 'mongodb://mongo:4M3Gr_FGyfjks!v@ds259586.mlab.com:59586/heroku_t8xqw6t1';
 }
 
 app.use(session({
