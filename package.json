@@ -1,15 +1,15 @@
 {
-  "name": "node-login",
+  "name": "mongo",
   "version": "1.7.0",
   "description": "A template for quickly building login systems on top of Node.js & MongoDb",
-  "author": "Stephen Braitsch <stephen@braitsch.io>",
+  "author": "Axmed Nuur <axmeda100@gmail.com>",
   "website": {
-    "url": "https://nodejs-login.herokuapp.com"
+    "url": "http://young-cove-73632.herokuapp.com"
   },
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:braitsch/node-login.git"
+    "url": "git@github.com/Codymorr/firstone.git"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
