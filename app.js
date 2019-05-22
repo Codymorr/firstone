@@ -25,18 +25,18 @@ app.use(require('stylus').middleware({ src: __dirname + '/app/public' }));
 app.use(express.static(__dirname + '/app/public'));
 
 // build mongo database connection url //
-
-process.env.DB_HOST = process.env.DB_HOST || 'mongo';
-process.env.DB_USER = process.env.DB_USER || 'mongo';
-process.env.DB_PORT = process.env.DB_PORT || 'ds259586.mlab.com:59586';
+process.env.DB_HOST = process.env.DB_HOST || 'ds259586.mlab.com'
+process.env.DB_PORT = process.env.DB_PORT || 59586;
 process.env.DB_NAME = process.env.DB_NAME || 'heroku_t8xqw6t1';
+process.env.DB_USER = process.env.DB_USER || 'mongo2';
 process.env.DB_PASS = process.env.DB_PASS || '4M3Gr_FGyfjks!v';
 
 if (app.get('env') != 'live'){
+	//mongodb://<dbuser>:<dbpassword>@ds259586.mlab.com:59586/heroku_t8xqw6t1
 	process.env.DB_URL = 'mongodb://'+process.env.DB_HOST+':'+process.env.DB_PORT;
 }	else {
 // prepend url with authentication credentials // 
-	process.env.DB_URL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+process.env.DB_HOST+':'+process.env.DB_PORT;
+	process.env.DB_URL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+process.env.DB_HOST+':'+process.env.DB_PORT +'/'+process.env.DB_NAME;
 }
 
 app.use(session({
